@@ -139,8 +139,22 @@ nav ul a:hover {
     text-decoration: none;
 }
  
-.idiomas a:hover {
+.idiomas a:hover,
+.idiomas button:hover {
     background-color: var(--lavanda);
+}
+
+/*Botones de idioma (Google Translate)*/
+.idiomas button {
+    padding: 0.25rem 0.75rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-color: var(--menta);
+    color: var(--cacao);
+    font-family: var(--fuente-texto);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
 }
  
 /*Contenido principal*/
