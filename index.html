@@ -44,8 +44,30 @@
 
     <!-- Enlaces para cambiar de idioma -->
     <div class="idiomas">
-        <a href="index.html">Español</a>
-        <a href="portugues.html">Português</a>
+    <button onclick="traducir('pt')">🇵🇹 Português</button>
+    <button onclick="traducir('es')">🇪🇸 Español</button>
+
+    <!-- Contenedor oculto del widget -->
+    <div id="google_translate_element" style="display:none"></div>
+
+    <script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'es,pt',
+        autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+    function traducir(idioma) {
+    const combo = document.querySelector('.goog-te-combo');
+    if (combo) {
+      combo.value = idioma;
+      combo.dispatchEvent(new Event('change'));
+    }
+  }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </div>
 </nav>
 
