@@ -1,21 +1,32 @@
 <!DOCTYPE html>
+<!-- Indica que es un documento HTML5 -->
+<!-- Etiqueta principal de la página; lang="es" indica que está en español -->
 <html lang="es">
 
+<!-- Datos de la página que no se ven en pantalla -->
 <head>
+    <!-- Título que aparece en la pestaña del navegador -->
     <title>Migas Amigas - Empanadas</title>
+    <!-- Permite que se vean bien las tildes y la ñ -->
     <meta charset="UTF-8">
+    <!-- Conecta la página con su hoja de estilos (CSS) -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
+<!-- Todo lo que se ve en la página -->
 <body>
+<!-- Cabecera: nombre del negocio y animación -->
 <header>
     <h1>Migas Amigas</h1>
     <div class="animacion-pan">
+        <!-- Imagen animada de la cabecera (alt es el texto alternativo) -->
         <img src="img/animacion-elaboracion-pan.gif" alt="Animación ilustrada del proceso de elaboración del pan artesanal" />
     </div>
 </header>
 
+<!-- Menú para moverse entre las páginas de la web -->
 <nav>
+    <!-- Lista con los enlaces del menú -->
     <ul>
         <li>
             <a href="index.html">Inicio / Panadería</a>
@@ -26,35 +37,45 @@
         <li>
             <a href="empanadas.html">Empanadas</a>
         </li>
+        <!-- Enlace que lleva directamente a la sección de contacto -->
         <li>
             <a href="index.html#contacto">Contacto</a>
         </li>
     </ul>
 
+    <!-- Enlaces para cambiar de idioma -->
     <div class="idiomas">
         <a href="empanadas.html">Español</a>
         <a href="portugues.html">Português</a>
     </div>
 </nav>
 
+<!-- Contenido principal de la página -->
 <main>
 
+    <!-- Sección con el catálogo de empanadas -->
     <section id="empanadas">
         <h2>Empanadas</h2>
         <p>En esta sección, encontrarás todas nuestras empanadas.</p>
 
         <!-- Producto 1 -->
+        <!-- Cada producto va en un article con su nombre, descripción y tabla -->
         <article>
+            <!-- Nombre del producto -->
             <h3>Empanada tradicional de atún</h3>
             <p>Empanada casera elaborada con masa crujiente y un jugoso relleno de atún, pimiento y cebolla pochada.</p>
+            <!-- Tabla con tres columnas: ingredientes, elaboración y fotografía -->
             <table border="1">
+                <!-- Fila de encabezados -->
                 <tr>
                     <th>Ingredientes</th>
                     <th>Elaboración</th>
                     <th>Fotografía</th>
                 </tr>
+                <!-- Fila con los datos del producto -->
                 <tr>
                     <td>
+                        <!-- Lista de ingredientes -->
                         <ul>
                             <li>Harina de trigo</li>
                             <li>Atún en conserva</li>
@@ -64,9 +85,11 @@
                             <li>Aceite de oliva y sal</li>
                         </ul>
                     </td>
+                    <!-- Celda con el proceso de elaboración -->
                     <td>
                         <p>Se sofríen las verduras y se mezclan con el atún. Se estira la masa en dos capas, se coloca el relleno, se sellan los bordes y se hornea a 180 ºC durante 35 minutos.</p>
                     </td>
+                    <!-- Celda con la foto del producto -->
                     <td>
                         <img src="C:\Users\Dani\Desktop\Migas-Migas\img\emapanada_atun.jpg" alt="Empanada tradicional de atún"/>
                     </td>
@@ -74,6 +97,7 @@
             </table>
         </article>
 
+        <!-- El resto de productos siguen exactamente la misma estructura -->
         <!-- Producto 2 -->
         <article>
             <h3>Empanada de carne picada estofada</h3>
@@ -168,6 +192,7 @@
 
 </main>
 
+<!-- Pie de página con el copyright -->
 <footer>
     <p>&copy; 2026 Migas Amigas - Panadería familiar</p>
     <p>Pan artesanal, pastelería-bollería y empanadas</p>

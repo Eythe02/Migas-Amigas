@@ -1,21 +1,32 @@
 <!DOCTYPE html>
+<!-- Indica que es un documento HTML5 -->
+<!-- Etiqueta principal de la página; lang="es" indica que está en español -->
 <html lang="es">
 
+<!-- Datos de la página que no se ven en pantalla -->
 <head>
+    <!-- Título que aparece en la pestaña del navegador -->
     <title>Migas Amigas - Panadería</title>
+    <!-- Permite que se vean bien las tildes y la ñ -->
     <meta charset="UTF-8">
+    <!-- Conecta la página con su hoja de estilos (CSS) -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
+<!-- Todo lo que se ve en la página -->
 <body>
+<!-- Cabecera: nombre del negocio y animación -->
 <header>
     <h1>Migas Amigas</h1>
     <div class="animacion-pan">
+        <!-- Imagen animada de la cabecera (alt es el texto alternativo) -->
         <img src="C:\Users\Dani\Desktop\Migas-Migas\img\Mozilla_with_bread.gif" alt="Animación" />
     </div>
 </header>
 
+<!-- Menú para moverse entre las páginas de la web -->
 <nav>
+    <!-- Lista con los enlaces del menú -->
     <ul>
         <li>
             <a href="index.html">Inicio / Panadería</a>
@@ -26,19 +37,23 @@
         <li>
             <a href="empanadas.html">Empanadas</a>
         </li>
+        <!-- Enlace que lleva directamente a la sección de contacto -->
         <li>
             <a href="index.html#contacto">Contacto</a>
         </li>
     </ul>
 
+    <!-- Enlaces para cambiar de idioma -->
     <div class="idiomas">
         <a href="index.html">Español</a>
         <a href="portugues.html">Português</a>
     </div>
 </nav>
 
+<!-- Contenido principal de la página -->
 <main>
 
+    <!-- Sección de introducción sobre cómo se elabora el pan -->
     <section>
         <h2>Elaboración del pan</h2>
         <p>¡Bienvenidos a nuestra panadería! Para crear el pan artesanal perfecto en casa, solo necesitas ingredientes
@@ -49,26 +64,33 @@
             irresistible olor a pan recién horneado.</p>
     </section>
 
+    <!-- Sección con el catálogo de panes (el id sirve para identificarla) -->
     <section id="panaderia">
         <h2>Panadería</h2>
         <p>En esta sección, encontrarás todos nuestros panes.</p>
 
         <!-- Producto 1 -->
+        <!-- Cada producto va en un article con su nombre, descripción y tabla -->
         <article>
+            <!-- Nombre del producto -->
             <h3>Pan de espelta tradicional</h3>
 
             <p>Ya os he hablado de la harina de espelta y sus beneficios para nuestra salud. Además de ser sana, la
                 harina de espelta nos permite preparar panes integrales de una textura asombrosa, muy parecidos a los
                 panes tradicionales.</p>
 
+            <!-- Tabla con tres columnas: ingredientes, elaboración y fotografía -->
             <table border="1">
+                <!-- Fila de encabezados -->
                 <tr>
                     <th>Ingredientes</th>
                     <th>Elaboración</th>
                     <th>Fotografía</th>
                 </tr>
+                <!-- Fila con los datos del producto -->
                 <tr>
                     <td>
+                        <!-- Lista de ingredientes -->
                         <ul>
                             <li>Harina de espelta</li>
                             <li>Agua</li>
@@ -77,12 +99,14 @@
                             <li>Aceite de oliva</li>
                         </ul>
                     </td>
+                    <!-- Celda con el proceso de elaboración -->
                     <td>
                         <p>Mezcla la harina de espelta con la sal y añade el agua tibia con la levadura. Amasa durante 10-15 minutos
                             hasta obtener una masa lisa y elástica. Déjala fermentar unos 45-60 minutos hasta que duplique su tamaño.
                             Después, vuelve a amasar, dale forma y deja reposar otros 30-40 minutos. Finalmente, hornea a 200 ºC durante
                             unos 30-40 minutos, hasta que el pan esté dorado y suene hueco al golpear la base.</p>
                     </td>
+                    <!-- Celda con la foto del producto -->
                     <td>
                         <img src="C:\Users\Dani\Desktop\Migas-Migas\img\pan_espelta.jpg" alt="Pan de espelta tradicional"/>
                     </td>
@@ -90,6 +114,7 @@
             </table>
         </article>
 
+        <!-- El resto de productos siguen exactamente la misma estructura -->
         <!-- Producto 2 -->
         <article>
             <h3>Pan rústico de masa madre</h3>
@@ -416,6 +441,7 @@
 
     </section>
 
+    <!-- Sección de contacto: dirección, teléfono y croquis (a ella apunta el enlace del menú) -->
     <section id="contacto">
         <h2>Contacto</h2>
 
@@ -423,6 +449,7 @@
         <p>Nos encontramos en Badajoz, muy cerca de la frontera con Portugal. Puedes llegar fácilmente desde el centro
             de Badajoz siguiendo la carretera en dirección a Portugal.</p>
 
+        <!-- <br/> hace un salto de línea dentro del mismo párrafo -->
         <p>Migas Amigas<br/>
             Avenida de Portugal, 10<br/>
             06000 Badajoz, España</p>
@@ -430,12 +457,14 @@
         <p>Teléfono: 924 000 000</p>
 
         <h3>Croquis de ubicación</h3>
+        <!-- Imagen con el mapa de ubicación -->
         <img src="img/croquis-ubicacion.jpg" alt="Croquis de ubicación de la panadería Migas Amigas en Badajoz" />
 
     </section>
 
 </main>
 
+<!-- Pie de página con el copyright -->
 <footer>
     <p>&copy; 2026 Migas Amigas - Panadería familiar</p>
     <p>Pan artesanal, pastelería-bollería y empanadas</p>
