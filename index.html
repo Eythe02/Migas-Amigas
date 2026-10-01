@@ -1,26 +1,30 @@
 <!DOCTYPE html>
-<!-- Indica que es un documento HTML5 -->
-<!-- Etiqueta principal de la página; lang="es" indica que está en español -->
+<!-- Etiqueta principal de la página, lang="es" indica el idioma-->
 <html lang="es">
 
-<!-- Datos de la página que no se ven en pantalla -->
+<!-- Datos de la página  -->
 <head>
     <!-- Título que aparece en la pestaña del navegador -->
     <title>Migas Amigas - Panadería</title>
-    <!-- Permite que se vean bien las tildes y la ñ -->
+    <!-- Permite la nomenclatura española -->
     <meta charset="UTF-8">
-    <!-- Conecta la página con su hoja de estilos (CSS) -->
+    <!-- Conecta la página con la carpeta CSS -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <!-- Todo lo que se ve en la página -->
 <body>
-<!-- Cabecera: nombre del negocio y animación -->
+<!-- Cabecera: nombre del negocio y gif -->
 <header>
     <h1>Migas Amigas</h1>
     <div class="animacion-pan">
+<<<<<<< HEAD
         <!-- Imagen animada de la cabecera (alt es el texto alternativo) -->
         <img src="C:\Users\Dani\Desktop\Migas-Amigas\img\Mozilla_with_bread.gif" alt="Animación" />
+=======
+        <!-- Gif de elaboración del pan -->
+        <img src="C:\Users\Dani\Desktop\Migas-Migas\img\Mozilla_with_bread.gif" alt="Animación" />
+>>>>>>> f2ac56df2c244c99b848444250840993eb662c39
     </div>
 </header>
 
@@ -37,7 +41,7 @@
         <li>
             <a href="empanadas.html">Empanadas</a>
         </li>
-        <!-- Enlace que lleva directamente a la sección de contacto -->
+        <!-- Enlace que lleva directamente a contacto -->
         <li>
             <a href="index.html#contacto">Contacto</a>
         </li>
@@ -45,8 +49,30 @@
 
     <!-- Enlaces para cambiar de idioma -->
     <div class="idiomas">
-        <a href="index.html">Español</a>
-        <a href="portugues.html">Português</a>
+    <button onclick="traducir('pt')">🇵🇹 Português</button>
+    <button onclick="traducir('es')">🇪🇸 Español</button>
+
+    <!-- Contenedor oculto del widget -->
+    <div id="google_translate_element" style="display:none"></div>
+
+    <script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'es,pt',
+        autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+    function traducir(idioma) {
+    const combo = document.querySelector('.goog-te-combo');
+    if (combo) {
+      combo.value = idioma;
+      combo.dispatchEvent(new Event('change'));
+    }
+  }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </div>
 </nav>
 
@@ -64,7 +90,7 @@
             irresistible olor a pan recién horneado.</p>
     </section>
 
-    <!-- Sección con el catálogo de panes (el id sirve para identificarla) -->
+    <!-- Sección con el catálogo de panes (el id sirve para identificarla en el nav) -->
     <section id="panaderia">
         <h2>Panadería</h2>
         <p>En esta sección, encontrarás todos nuestros panes.</p>
@@ -441,7 +467,7 @@
 
     </section>
 
-    <!-- Sección de contacto: dirección, teléfono y croquis (a ella apunta el enlace del menú) -->
+    <!-- Sección de contacto: dirección, teléfono y croquis -->
     <section id="contacto">
         <h2>Contacto</h2>
 
