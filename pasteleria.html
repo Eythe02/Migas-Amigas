@@ -42,10 +42,35 @@
         </li>
     </ul>
 
-    <!-- Enlaces para cambiar de idioma -->
+    <!-- Botones para cambiar de idioma (castellano / portugués) -->
     <div class="idiomas">
-        <a href="pasteleria.html">Español</a>
-        <a href="portugues.html">Português</a>
+        <button type="button" onclick="traducir('pt')">&#127477;&#127481; Português</button>
+        <button type="button" onclick="traducir('es')">&#127466;&#127480; Español</button>
+
+        <!-- Contenedor oculto del widget de Google Translate -->
+        <div id="google_translate_element" style="display:none"></div>
+
+        <script>
+            // Configura el traductor: página original en español, idiomas permitidos es y pt
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'es',
+                    includedLanguages: 'es,pt',
+                    autoDisplay: false
+                }, 'google_translate_element');
+            }
+
+            // Cambia el idioma seleccionando el valor en el desplegable oculto de Google
+            function traducir(idioma) {
+                const combo = document.querySelector('.goog-te-combo');
+                if (combo) {
+                    combo.value = idioma;
+                    combo.dispatchEvent(new Event('change'));
+                }
+            }
+        </script>
+        <!-- Carga el script de Google Translate -->
+        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </div>
 </nav>
 
@@ -64,7 +89,7 @@
             <h3>Croissant artesanal de mantequilla</h3>
             <p>Crujiente por fuera y hojaldrado por dentro, elaborado con mantequilla artesanal siguiendo la receta tradicional.</p>
             <!-- Tabla con tres columnas: ingredientes, elaboración y fotografía -->
-            <table border="1">
+            <table>
                 <!-- Fila de encabezados -->
                 <tr>
                     <th>Ingredientes</th>
@@ -89,7 +114,7 @@
                     </td>
                     <!-- Celda con la foto del producto -->
                     <td>
-                        <img src="C:\Users\Dani\Desktop\Migas-Amigas\img\croissant.jpg" alt="Croissant artesanal de mantequilla"/>
+                        <img src="img/croissant.jpg" alt="Croissant artesanal de mantequilla"/>
                     </td>
                 </tr>
             </table>
@@ -100,7 +125,7 @@
         <article>
             <h3>Napolitana de chocolate</h3>
             <p>Hojaldre tierno horneado cada mañana y relleno con dos barras de cremoso chocolate negro.</p>
-            <table border="1">
+            <table>
                 <tr>
                     <th>Ingredientes</th>
                     <th>Elaboración</th>
@@ -119,7 +144,7 @@
                         <p>Se estira la masa de hojaldre en rectángulos, se envuelven las barritas de chocolate, se pintan con huevo batido y se hornean a 200 ºC durante 18 minutos.</p>
                     </td>
                     <td>
-                        <img src="C:\Users\Dani\Desktop\Migas-Amigas\img\napolitana.jpg" alt="Napolitana de chocolate"/>
+                        <img src="img/napolitana.jpg" alt="Napolitana de chocolate"/>
                     </td>
                 </tr>
             </table>
@@ -129,7 +154,7 @@
         <article>
             <h3>Ensaimada tradicional</h3>
             <p>Masa enroscada en espiral, esponjosa y ligera, espolvoreada con abundante azúcar glas.</p>
-            <table border="1">
+            <table>
                 <tr>
                     <th>Ingredientes</th>
                     <th>Elaboración</th>
@@ -148,7 +173,7 @@
                         <p>Se estira la masa muy fina, se unta con manteca de cerdo, se enrolla en cilindro y luego en forma de espiral. Larga fermentación de 12 horas antes de hornear a 180 ºC.</p>
                     </td>
                     <td>
-                        <img src="C:\Users\Dani\Desktop\Migas-Amigas\img\ensaimada_tradicional.jpg" alt="Ensaimada tradicional"/>
+                        <img src="img/ensaimada_tradicional.jpg" alt="Ensaimada tradicional"/>
                     </td>
                 </tr>
             </table>
@@ -158,7 +183,7 @@
         <article>
             <h3>Palmera de hojaldre caramelizada</h3>
             <p>Crujiente palmera de hojaldre horneada con capa de azúcar caramelizado en los bordes.</p>
-            <table border="1">
+            <table>
                 <tr>
                     <th>Ingredientes</th>
                     <th>Elaboración</th>
@@ -177,7 +202,7 @@
                         <p>Se plega el hojaldre espolvoreando abundante azúcar entre capa y capa. Se cortan rodajas de la masa enrollada y se hornean a 210 ºC voltiándolas para caramelizar ambos lados.</p>
                     </td>
                     <td>
-                        <img src= "C:\Users\Dani\Desktop\Migas-Amigas\img\palmera_hojaldre.jpg"alt="Palmera de hojaldre caramelizada"/>
+                        <img src="img/palmera_hojaldre.jpg" alt="Palmera de hojaldre caramelizada"/>
                     </td>
                 </tr>
             </table>
@@ -187,7 +212,7 @@
         <article>
             <h3>Muffin de arándanos y limón</h3>
             <p>Bizcocho jugoso y esponjoso repleto de arándanos frescos y un sutil aroma a ralladura de limón.</p>
-            <table border="1">
+            <table>
                 <tr>
                     <th>Ingredientes</th>
                     <th>Elaboración</th>
@@ -206,7 +231,7 @@
                         <p>Se mezclan los ingredientes secos por un lado y los líquidos por otro. Se unen suavemente sin batir en exceso, se añaden los arándanos y se hornea en tulipas de papel a 190 ºC por 22 minutos.</p>
                     </td>
                     <td>
-                        <img src="C:\Users\Dani\Desktop\Migas-Amigas\img\muffin arandanos.jpg" alt="Muffin de arándanos y limón"/>
+                        <img src="img/muffin_arandanos.jpg" alt="Muffin de arándanos y limón"/>
                     </td>
                 </tr>
             </table>
@@ -216,7 +241,7 @@
         <article>
             <h3>Pastel de crema catalana / Belém</h3>
             <p>Cazoleta de hojaldre muy crujiente rellena de crema pastelera horneada y dorada en la superficie.</p>
-            <table border="1">
+            <table>
                 <tr>
                     <th>Ingredientes</th>
                     <th>Elaboración</th>
@@ -235,7 +260,7 @@
                         <p>Se forran moldes metálicos con hojaldre. Se vierte la crema infusionada con canela y limón y se hornea a muy alta temperatura (250 ºC) durante pocos minutos para dorar la superficie.</p>
                     </td>
                     <td>
-                        <img src="C:\Users\Dani\Desktop\Migas-Amigas\img\pastel_crema_belem.jpg" alt="Pastel de crema catalana o Belém"/>
+                        <img src="img/pastel_crema_belem.jpg" alt="Pastel de crema catalana o Belém"/>
                     </td>
                 </tr>
             </table>
@@ -245,7 +270,7 @@
         <article>
             <h3>Donut / Rosquilla glaseada tradicional</h3>
             <p>Rosquilla frita esponjosa con una fina y crujiente cobertura de glaseado de azúcar.</p>
-            <table border="1">
+            <table>
                 <tr>
                     <th>Ingredientes</th>
                     <th>Elaboración</th>
@@ -264,7 +289,7 @@
                         <p>Masa fermentada cortada en aros. Tras un segundo reposo, se fríen en aceite suave hasta dorar ambos lados. Se escurren y se sumergen aún tibios en el baño de glaseado de azúcar.</p>
                     </td>
                     <td>
-                        <img src="C:\Users\Dani\Desktop\Migas-Amigas\img\donut_glaseado.jpg" alt="Donut / Rosquilla glaseada tradicional"/>
+                        <img src="img/donut_glaseado.jpg" alt="Donut / Rosquilla glaseada tradicional"/>
                     </td>
                 </tr>
             </table>
@@ -274,7 +299,7 @@
         <article>
             <h3>Tarta artesanal de manzana</h3>
             <p>Porción de tarta sobre base de masa quebrada, crema pastelera y láminas de manzana doradas al horno.</p>
-            <table border="1">
+            <table>
                 <tr>
                     <th>Ingredientes</th>
                     <th>Elaboración</th>
@@ -293,7 +318,7 @@
                         <p>Se extiende la masa en el molde, se cubre con crema pastelera y se disponen las manzanas laminadas. Se hornea a 180 ºC durante 40 minutos y se pincela con mermelada caliente.</p>
                     </td>
                     <td>
-                        <img src="C:\Users\Dani\Desktop\Migas-Amigas\img\tarta.jpg" alt="Tarta artesanal de manzana"/>
+                        <img src="img/tarta.jpg" alt="Tarta artesanal de manzana"/>
                     </td>
                 </tr>
             </table>

@@ -18,13 +18,8 @@
 <header>
     <h1>Migas Amigas</h1>
     <div class="animacion-pan">
-<<<<<<< HEAD
-        <!-- Imagen animada de la cabecera (alt es el texto alternativo) -->
-        <img src="C:\Users\Dani\Desktop\Migas-Amigas\img\Mozilla_with_bread.gif" alt="Animación" />
-=======
         <!-- Gif de elaboración del pan -->
-        <img src="C:\Users\Dani\Desktop\Migas-Migas\img\Mozilla_with_bread.gif" alt="Animación" />
->>>>>>> f2ac56df2c244c99b848444250840993eb662c39
+        <img src="img/animacion-elaboracion-pan.gif" alt="Animación ilustrada del proceso de elaboración del pan artesanal" />
     </div>
 </header>
 
@@ -47,32 +42,35 @@
         </li>
     </ul>
 
-    <!-- Enlaces para cambiar de idioma -->
+    <!-- Botones para cambiar de idioma (castellano / portugués) -->
     <div class="idiomas">
-    <button onclick="traducir('pt')">🇵🇹 Português</button>
-    <button onclick="traducir('es')">🇪🇸 Español</button>
+        <button type="button" onclick="traducir('pt')">&#127477;&#127481; Português</button>
+        <button type="button" onclick="traducir('es')">&#127466;&#127480; Español</button>
 
-    <!-- Contenedor oculto del widget -->
-    <div id="google_translate_element" style="display:none"></div>
+        <!-- Contenedor oculto del widget de Google Translate -->
+        <div id="google_translate_element" style="display:none"></div>
 
-    <script>
-    function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-        pageLanguage: 'es',
-        includedLanguages: 'es,pt',
-        autoDisplay: false
-    }, 'google_translate_element');
-  }
+        <script>
+            // Configura el traductor: página original en español, idiomas permitidos es y pt
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'es',
+                    includedLanguages: 'es,pt',
+                    autoDisplay: false
+                }, 'google_translate_element');
+            }
 
-    function traducir(idioma) {
-    const combo = document.querySelector('.goog-te-combo');
-    if (combo) {
-      combo.value = idioma;
-      combo.dispatchEvent(new Event('change'));
-    }
-  }
-</script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            // Cambia el idioma seleccionando el valor en el desplegable oculto de Google
+            function traducir(idioma) {
+                const combo = document.querySelector('.goog-te-combo');
+                if (combo) {
+                    combo.value = idioma;
+                    combo.dispatchEvent(new Event('change'));
+                }
+            }
+        </script>
+        <!-- Carga el script de Google Translate -->
+        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </div>
 </nav>
 
@@ -101,12 +99,10 @@
             <!-- Nombre del producto -->
             <h3>Pan de espelta tradicional</h3>
 
-            <p>Ya os he hablado de la harina de espelta y sus beneficios para nuestra salud. Además de ser sana, la
-                harina de espelta nos permite preparar panes integrales de una textura asombrosa, muy parecidos a los
-                panes tradicionales.</p>
+            <p>Elaborado con harina de espelta, un cereal rico en fibra y fácil de digerir, que permite obtener un pan integral de textura suave y sabor tradicional.</p>
 
             <!-- Tabla con tres columnas: ingredientes, elaboración y fotografía -->
-            <table border="1">
+            <table>
                 <!-- Fila de encabezados -->
                 <tr>
                     <th>Ingredientes</th>
@@ -134,7 +130,7 @@
                     </td>
                     <!-- Celda con la foto del producto -->
                     <td>
-                        <img src="C:\Users\Dani\Desktop\Migas-Amigas\img\pan_espelta.jpg" alt="Pan de espelta tradicional"/>
+                        <img src="img/pan_espelta.jpg" alt="Pan de espelta tradicional"/>
                     </td>
                 </tr>
             </table>
@@ -145,7 +141,7 @@
         <article>
             <h3>Pan rústico de masa madre</h3>
             <p>Pan de pueblo elaborado con masa madre de cultivo propio, de fermentación lenta de 24 horas y cocido en horno de piedra.</p>
-            <table border="1">
+            <table>
                 <tr>
                     <th>Ingredientes</th>
                     <th>Elaboración</th>
@@ -164,7 +160,7 @@
                         <p>Se realiza el autolisis de harina y agua durante 1 hora. Se incorpora la masa madre y la sal, amasando mediante pliegues. Fermentación en bloque durante 18 horas en frío, formado a mano y horneado sobre suela de piedra a 230 ºC con vapor.</p>
                     </td>
                     <td>
-                        <img src="C:\Users\Dani\Desktop\Migas-Amigas\img\pan_rutico.jpg" alt="Pan rústico de masa madre"/>
+                        <img src="img/pan_rustico.jpg" alt="Pan rústico de masa madre"/>
                     </td>
                 </tr>
             </table>
@@ -174,7 +170,7 @@
         <article>
             <h3>Baguette artesanal tradicional</h3>
             <p>Clásica barra de estilo francés, con una corteza fina y muy crujiente, y una miga alveolada y suave.</p>
-            <table border="1">
+            <table>
                 <tr>
                     <th>Ingredientes</th>
                     <th>Elaboración</th>
@@ -194,7 +190,7 @@
                         <p>Amasado suave para conservar la estructura. Reposo en bloque de 2 horas. Formado en barras alargadas con cortes inclinados (greñado) en la superficie. Horneado a alta temperatura con vapor intenso durante 22 minutos.</p>
                     </td>
                     <td>
-                        <img src="C:\Users\Dani\Desktop\Migas-Amigas\img\baguette artesanal.jpg" alt="Baguette artesanal tradicional"/>
+                        <img src="img/baguette_artesanal.jpg" alt="Baguette artesanal tradicional"/>
                     </td>
                 </tr>
             </table>
@@ -204,7 +200,7 @@
         <article>
             <h3>Pan de centeno integral</h3>
             <p>Pan denso y nutritivo, ideal para tostadas saladas. Destaca por su sabor ligeramente ácido y su alto contenido en fibra.</p>
-            <table border="1">
+            <table>
                 <tr>
                     <th>Ingredientes</th>
                     <th>Elaboración</th>
@@ -223,7 +219,7 @@
                         <p>Mezcla rápida sin amasado prolongado debido al bajo contenido de gluten del centeno. Reposo largo en molde de madera. Horneado progresivo empezando a 240 ºC y bajando a 200 ºC durante 50 minutos.</p>
                     </td>
                     <td>
-                        <img src="C:\Users\Dani\Desktop\Migas-Amigas\img\pan_centeno_artesanal.jpg" alt="Pan de centeno integral"/>
+                        <img src="img/pan_centeno_artesanal.jpg" alt="Pan de centeno integral"/>
                     </td>
                 </tr>
             </table>
@@ -233,7 +229,7 @@
         <article>
             <h3>Hogaza de pueblo multigranos</h3>
             <p>Hogaza elaborada con una mezcla de cereales y cubierta con una generosa capa de semillas tostadas.</p>
-            <table border="1">
+            <table>
                 <tr>
                     <th>Ingredientes</th>
                     <th>Elaboración</th>
@@ -253,7 +249,7 @@
                         <p>Las semillas se rehidratan previamente. Se incorporan a la masa al final del amasado. Tras la segunda fermentación, se reboza la corteza en semillas y se hornea a 210 ºC durante 40 minutos.</p>
                     </td>
                     <td>
-                        <img src="C:\Users\Dani\Desktop\Migas-Amigas\img\hoagaza_multigranos.jpg" alt="Hogaza de pueblo multigranos"/>
+                        <img src="img/hogaza_multigranos.jpg" alt="Hogaza de pueblo multigranos"/>
                     </td>
                 </tr>
             </table>
@@ -263,7 +259,7 @@
         <article>
             <h3>Pan de molde artesanal de leche</h3>
             <p>Pan suave, tierno y sin conservantes artificiales, perfecto para el desayuno de toda la familia.</p>
-            <table border="1">
+            <table>
                 <tr>
                     <th>Ingredientes</th>
                     <th>Elaboración</th>
@@ -283,7 +279,7 @@
                         <p>Amasado intensivo hasta conseguir una masa elástica. Se coloca en moldes alargados rectangulares y se deja fermentar hasta doblar su volumen. Se hornea suavemente a 180 ºC durante 30 minutos.</p>
                     </td>
                     <td>
-                        <img src="C:\Users\Dani\Desktop\Migas-Amigas\img\pan_molde_leche.jpg" alt="Pan de molde artesanal de leche"/>
+                        <img src="img/pan_molde_leche.jpg" alt="Pan de molde artesanal de leche"/>
                     </td>
                 </tr>
             </table>
@@ -293,7 +289,7 @@
         <article>
             <h3>Pan de maíz y pipas de calabaza</h3>
             <p>Pan de miga dorada, sabrosa y húmeda, típico por su toque dulce natural aportado por la harina de maíz.</p>
-            <table border="1">
+            <table>
                 <tr>
                     <th>Ingredientes</th>
                     <th>Elaboración</th>
@@ -313,7 +309,7 @@
                         <p>Se escalda la harina de maíz con agua hirviendo para liberar sus azúcares. Una vez fría, se mezcla con la harina de trigo y las pipas. Se le da forma redonda y se hornea a 200 ºC durante 45 minutos.</p>
                     </td>
                     <td>
-                        <img src="C:\Users\Dani\Desktop\Migas-Amigas\img\pan maiz de pipas.jpg" alt="Pan de maíz y pipas de calabaza"/>
+                        <img src="img/pan_maiz_pipas.jpg" alt="Pan de maíz y pipas de calabaza"/>
                     </td>
                 </tr>
             </table>
@@ -323,7 +319,7 @@
         <article>
             <h3>Pan candeal o sobado</h3>
             <p>El tradicional pan castellano de miga densa, blanca y apretada, con corteza lisa y dorada.</p>
-            <table border="1">
+            <table>
                 <tr>
                     <th>Ingredientes</th>
                     <th>Elaboración</th>
@@ -342,7 +338,7 @@
                         <p>Masa de baja hidratación afinada mediante cilindros refinadores (sobado). Se corta la masa formando figuras tradicionales y se le realizan cortes profundos antes de hornear a 190 ºC sin humedad.</p>
                     </td>
                     <td>
-                        <img src="C:\Users\Dani\Desktop\Migas-Amigas\img\pan_candeal_sobado.jpg" alt="Pan candeal o sobado"/>
+                        <img src="img/pan_candeal_sobado.jpg" alt="Pan candeal o sobado"/>
                     </td>
                 </tr>
             </table>
@@ -352,7 +348,7 @@
         <article>
             <h3>Pan de aceitunas negras y romero</h3>
             <p>Pan aromático de inspiración mediterránea, ideal para acompañar quesos y embutidos.</p>
-            <table border="1">
+            <table>
                 <tr>
                     <th>Ingredientes</th>
                     <th>Elaboración</th>
@@ -372,7 +368,7 @@
                         <p>Amasado tradicional donde se agregan al final del proceso las aceitunas troceadas y el romero fresco. Fermentación media en cestos de mimbre (bannetons) y horneado a 210 ºC durante 35 minutos.</p>
                     </td>
                     <td>
-                        <img src="C:\Users\Dani\Desktop\Migas-Amigas\img\pan_aceitunas_romero.jpg" alt="Pan de aceitunas negras y romero"/>
+                        <img src="img/pan_aceitunas_romero.jpg" alt="Pan de aceitunas negras y romero"/>
                     </td>
                 </tr>
             </table>
@@ -382,7 +378,7 @@
         <article>
             <h3>Pan integral 100% de grano entero</h3>
             <p>Elaborado exclusivamente con harina de trigo integral molida a la piedra, conservando todo el salvado y germen.</p>
-            <table border="1">
+            <table>
                 <tr>
                     <th>Ingredientes</th>
                     <th>Elaboración</th>
@@ -401,7 +397,7 @@
                         <p>Requiere mayor hidratación por la absorción del salvado. Se realiza un amasado suave y reposo prolongado de 12 horas para facilitar la digestión. Se hornea a 200 ºC durante 45 minutos.</p>
                     </td>
                     <td>
-                        <img src="C:\Users\Dani\Desktop\Migas-Amigas\img\pan_integral.jpg" alt="Pan integral 100% de grano entero"/>
+                        <img src="img/pan_integral.jpg" alt="Pan integral 100% de grano entero"/>
                     </td>
                 </tr>
             </table>
@@ -411,7 +407,7 @@
         <article>
             <h3>Ciabatta / Chapata artesanal</h3>
             <p>Pan de origen italiano caracterizado por su altísima hidratación, miga muy alveolada y corteza crujiente.</p>
-            <table border="1">
+            <table>
                 <tr>
                     <th>Ingredientes</th>
                     <th>Elaboración</th>
@@ -430,7 +426,7 @@
                         <p>Amasado largo con alta hidratación. Múltiples pliegues durante la fermentación en cubetas. Se vierten las porciones sobre harina sin desgasar y se hornean directamente a 230 ºC con vapor fuerte.</p>
                     </td>
                     <td>
-                        <img src="C:\Users\Dani\Desktop\Migas-Amigas\img\ciabatta_chapata.jpg" alt="Ciabatta / Chapata artesanal"/>
+                        <img src="img/ciabatta_chapata.jpg" alt="Ciabatta / Chapata artesanal"/>
                     </td>
                 </tr>
             </table>
@@ -440,7 +436,7 @@
         <article>
             <h3>Pan de nueces y pasas</h3>
             <p>Especialidad dulce-salada ideal para maridar con quesos suaves, patés o para consumir en el desayuno.</p>
-            <table border="1">
+            <table>
                 <tr>
                     <th>Ingredientes</th>
                     <th>Elaboración</th>
@@ -459,7 +455,7 @@
                         <p>Se mezcla la harina con el agua y la sal. Se añaden las nueces y pasas al final para no romper los frutos. Formado en barrotines alargados y horneado a 200 ºC durante 35 minutos.</p>
                     </td>
                     <td>
-                        <img src="C:\Users\Dani\Desktop\Migas-Amigas\img\pan_nueces.jpg" alt="Pan de nueces y pasas"/>
+                        <img src="img/pan_nueces.jpg" alt="Pan de nueces y pasas"/>
                     </td>
                 </tr>
             </table>
