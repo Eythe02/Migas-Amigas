@@ -1,17 +1,28 @@
-/* ==========================================================
-   Adaptación de tu diseño a la rejilla de Bootstrap.
-   Solo maquetación: no define ningún color nuevo; donde hace
-   falta color usa tus mismas variables de estilos.css
-   (--tostado, --canela, --leche, --crema, --mantequilla).
-   ========================================================== */
 
-/* Los contenedores no añaden margen lateral extra:
-   cada zona conserva el relleno que ya tenía en estilos.css */
+:root {
+    --bs-body-color: var(--cacao);
+    --bs-body-bg: var(--crema);
+    --bs-border-color: var(--tostado);
+    --bs-heading-color: inherit;   
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: inherit;
+}
+
+
+.idiomas button {
+    line-height: normal;
+}
+
+
 .container-fluid {
     --bs-gutter-x: 0;
 }
 
-/* Menú: mismo reparto que antes (enlaces a la izquierda, idiomas a la derecha) */
+
 nav .row {
     justify-content: space-between;
     align-items: center;
@@ -24,7 +35,7 @@ nav .row {
     }
 }
 
-/* Productos: la antigua tabla de 3 columnas, ahora con la rejilla */
+
 .fila-producto {
     --bs-gutter-x: 0;
     --bs-gutter-y: 0;
@@ -55,7 +66,7 @@ nav .row {
     text-align: left;
 }
 
-/* Contenido de columna (antes <td>) */
+
 .contenido-col {
     flex: 1;
     padding: 1rem;
@@ -86,8 +97,6 @@ nav .row {
     border: 3px solid var(--mantequilla);
 }
 
-/* En móvil las columnas se apilan y el encabezado pasa a ser una etiqueta,
-   igual que hacía tu versión con tabla */
 @media (max-width: 767.98px) {
     .fila-producto > * + * {
         border-left: none;
