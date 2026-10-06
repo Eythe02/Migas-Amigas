@@ -1,0 +1,107 @@
+/* ==========================================================
+   Adaptación de tu diseño a la rejilla de Bootstrap.
+   Solo maquetación: no define ningún color nuevo; donde hace
+   falta color usa tus mismas variables de estilos.css
+   (--tostado, --canela, --leche, --crema, --mantequilla).
+   ========================================================== */
+
+/* Los contenedores no añaden margen lateral extra:
+   cada zona conserva el relleno que ya tenía en estilos.css */
+.container-fluid {
+    --bs-gutter-x: 0;
+}
+
+/* Menú: mismo reparto que antes (enlaces a la izquierda, idiomas a la derecha) */
+nav .row {
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 0.75rem;
+}
+
+@media (max-width: 720px) {
+    nav .row {
+        justify-content: center;
+    }
+}
+
+/* Productos: la antigua tabla de 3 columnas, ahora con la rejilla */
+.fila-producto {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+    margin: 1rem 0 0;
+    border: 2px solid var(--tostado);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.fila-producto > * {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--crema);
+}
+
+.fila-producto > * + * {
+    border-left: 2px solid var(--tostado);
+}
+
+/* Encabezado de columna (antes <th>) */
+.fila-producto h4 {
+    margin: 0;
+    padding: 0.7rem 1rem;
+    background-color: var(--canela);
+    color: var(--leche);
+    font-family: var(--fuente-titulos);
+    font-size: 1.05rem;
+    text-align: left;
+}
+
+/* Contenido de columna (antes <td>) */
+.contenido-col {
+    flex: 1;
+    padding: 1rem;
+}
+
+.contenido-col p {
+    margin: 0;
+}
+
+.contenido-col ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.contenido-col li {
+    margin-bottom: 0.25rem;
+}
+
+.contenido-col li::marker {
+    color: var(--canela);
+}
+
+.contenido-col img {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    border-radius: 12px;
+    border: 3px solid var(--mantequilla);
+}
+
+/* En móvil las columnas se apilan y el encabezado pasa a ser una etiqueta,
+   igual que hacía tu versión con tabla */
+@media (max-width: 767.98px) {
+    .fila-producto > * + * {
+        border-left: none;
+        border-top: 2px solid var(--tostado);
+    }
+
+    .fila-producto h4 {
+        padding: 1rem 1rem 0;
+        background-color: transparent;
+        color: var(--canela);
+        font-weight: 700;
+    }
+
+    .contenido-col {
+        padding-top: 0.4rem;
+    }
+}
